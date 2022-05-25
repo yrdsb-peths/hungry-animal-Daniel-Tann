@@ -47,7 +47,9 @@ public class Label extends Actor
     public void setValue(String value)
     {
         this.value = value;
+        
         updateImage();
+        
     }
     
     /**
@@ -91,4 +93,5 @@ public class Label extends Actor
     {
         setImage(new GreenfootImage(value, fontSize, fillColor, transparent, lineColor));
     }
+    
 }

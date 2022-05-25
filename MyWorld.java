@@ -22,7 +22,7 @@ public class MyWorld extends World
         addObject(e,300, 375);
         
         labelScore = new Label(0, 50);
-        addObject(labelScore, 20, 20);
+        addObject(labelScore, 40, 20);
         
         createBanana();
         
@@ -32,6 +32,7 @@ public class MyWorld extends World
     {
         score++;
         labelScore.setValue(score);
+       
     }
     public void createBanana()
     {
@@ -39,5 +40,12 @@ public class MyWorld extends World
         int x = Greenfoot.getRandomNumber(600);
         int y = 0;
         addObject(b,x,y);
+    }
+    
+    
+    public void loss()
+    {
+        Label loss = new Label("You Lose", 100);
+        addObject(loss, 300,200);
     }
 }

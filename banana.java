@@ -15,6 +15,11 @@ public class banana extends Actor
     public void act()
     {
         setLocation(getX(), getY()+1);
-
+        MyWorld world = (MyWorld) getWorld();
+        if(getY() == 399)
+        {
+            world.loss(); 
+            world.removeObject(this);
+        }
     }
 }

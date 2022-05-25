@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class baby extends Actor
 {
+    int x = 0;
     /**
      * Act - do whatever the baby wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -17,8 +18,9 @@ public class baby extends Actor
         move(1);
         if(isAtEdge())
         {
-            turn(40);
-            new baby();
+            x = Greenfoot.getRandomNumber(359);
+            turn(x);
+            
         }
     }
 }
